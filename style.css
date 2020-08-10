@@ -214,6 +214,19 @@ header {
     font-weight: bold;
     border-radius: 10px;
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cat-bread__card__back a {
+    font-size: 1rem;
+    padding: 0.1vw 0.5vw;
+    margin: 0.5vw;
+    background: white;
+    color: var(--background-main-color);
+    opacity: 0.6;
 }
 
 .cat-bread__card img {
@@ -229,15 +242,17 @@ header {
 
 /*** mobile responsive ****/
 @media(max-width: 500px) {
+
     #navbar {
         background-color: var(--background-main-color);
         color: var(--main-color);
+        justify-content: center;
     } 
     #navbar .flex-box {
         display: none;
     }
     .home__welcome h1 {
-        font-size: 2.5rem;
+        font-size: 9.5vw;
     }
     .container1 {
         flex-direction: column;
@@ -248,6 +263,9 @@ header {
     }
     .cat-bread__card__back {
         font-size: 1rem;
+    }
+    .cat-bread__card__back a {
+        font-size: 2vw;
     }
 }
 
@@ -271,4 +289,5 @@ header {
     .cat-bread__card__back {
         font-size: 1rem;
     } 
+
 }
