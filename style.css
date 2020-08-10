@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
     margin: 0px; 
     padding: 0px;
     box-sizing: border-box;
@@ -31,9 +33,9 @@ ul {
 }
 
 header {
-    background: url('/cats/cat-glasses-space.jpg') no-repeat center center/cover;
+    background: url('./cats/cat-glasses-space.jpg') no-repeat center center/cover;
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     color: var(--main-color);
     font-family: sans-serif;
     overflow: hidden
@@ -196,6 +198,7 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
    
 }
@@ -203,8 +206,12 @@ header {
 
 .cat-bread__card__back {
     background-color: var(--background-second-color);
-    color:var(--main-color);
+    background: url('./cats/cat-back-card.jfif') no-repeat;
+    background-size: 100% 100%;
+    color: var(--main-color);
+    -webkit-text-stroke: 1px var(--background-second-color);
     font-size: 2rem;
+    font-weight: bold;
     border-radius: 10px;
     transform: rotateY(180deg);
 }
@@ -214,7 +221,7 @@ header {
     height:100%;
     padding: 0;
     margin: 0;
-    object-fit: cover;
+    /* object-fit: cover; */
     border: 2px solid var(--background-second-color);
     border-radius: 10px;
 }
